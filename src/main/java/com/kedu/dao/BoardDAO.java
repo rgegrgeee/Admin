@@ -5,9 +5,9 @@ import com.kedu.dto.BoardDTO;
 
 public interface BoardDAO {
 
-    void insertBoard(BoardDTO board);              // °Ô½ÃÆÇ »ý¼º
-    List<BoardDTO> selectAllBoards();              // ÀüÃ¼ °Ô½ÃÆÇ Á¶È¸
-    BoardDTO selectBoardById(int boardId);         // °Ô½ÃÆÇ ´Ü°Ç Á¶È¸
-    void updateBoard(BoardDTO board);              // °Ô½ÃÆÇ Á¤º¸ ¼öÁ¤
-    void deleteBoard(int boardId);                 // °Ô½ÃÆÇ »èÁ¦ (³í¸® or ¹°¸®)
+    void insertBoard(String boardName);              // ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    List<BoardDTO> selectAllBoards();              // ï¿½ï¿½Ã¼ ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
+    BoardDTO selectBoardById(int boardId);         // ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½Ü°ï¿½ ï¿½ï¿½È¸
+    void updateBoard(BoardDTO board);              // ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    void deleteBoard(int boardId);                 // ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ or ï¿½ï¿½ï¿½ï¿½)
 }

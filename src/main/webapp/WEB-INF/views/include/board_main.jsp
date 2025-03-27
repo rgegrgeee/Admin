@@ -31,19 +31,11 @@
 	<div class="wrapper">
 		<div class="sidebar">
 			<h2>게시판 관리</h2>
-			<a href="#" class="menu-btn" data-target="board-section">게시판 관리</a>
+			<a href="#" class="menu-btn" data-target="addBoard">게시판 목록</a>
+			<a href="#" class="menu-btn" data-target="boardList">게시판 등록</a>
 		</div>
 		<div class="content">
-			<!-- 부서 관리 -->
-			<div class="section active" id="board-section">
-				<h3>게시판 등록</h3>
-				<form id="boardForm" action="/board/insert" method="post">
-					<div class="form-group">
-						<label>게시판 이름</label> <input type="text" name="boardName" />
-					</div>
-					<button class="btn">등록</button>
-				</form>
-
+			<div class="section active" id="boardList">
 				<h3>게시판 목록</h3>
 				<table>
 					<thead>
@@ -54,9 +46,19 @@
 						</tr>
 					</thead>
 					<tbody id="boardTable">
-					
+						
 					</tbody>
 				</table>
+			</div>
+
+			<div class="section active" id="addBoard">
+				<h3>새로운 게시판 등록</h3>
+				<form id="boardForm" action="/board/insert">
+					<div class="form-group">
+						<input type="text" name="boardName" placeholder="생성할 게시판의 이름 입력" />
+						<button class="btn">등록</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

@@ -14,11 +14,11 @@ public class BoardDAOImp implements BoardDAO {
     @Autowired
     private SqlSessionTemplate sqlSession;
 
-    private static final String NAMESPACE = "com.kedu.mapper.BoardMapper";
+    private static final String NAMESPACE = "Board";
 
     @Override
-    public void insertBoard(BoardDTO board) {
-        sqlSession.insert(NAMESPACE + ".insertBoard", board);
+    public void insertBoard(String boardName) {
+        sqlSession.insert(NAMESPACE + ".insertBoard", boardName);
     }
 
     @Override
