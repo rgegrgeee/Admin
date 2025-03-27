@@ -13,30 +13,30 @@ public class DepartDAOImp implements DepartDAO {
     @Autowired
     private SqlSessionTemplate sqlSession;
 
-    private static final String NAMESPACE = "com.kedu.mapper.DeptMapper";
+    private static final String NAMESPACE = "Depart";
 
     @Override
     public void insertDept(DepartDTO dept) {
-        sqlSession.insert(NAMESPACE + ".insertDept", dept);
+        sqlSession.insert(NAMESPACE + ".insertDept", dept); //확인
     }
 
     @Override
     public List<DepartDTO> selectAllDepts() {
-        return sqlSession.selectList(NAMESPACE + ".selectAllDepts");
+        return sqlSession.selectList(NAMESPACE + ".selectAllDepts"); //확인
     }
 
     @Override
     public DepartDTO selectDeptById(int deptId) {
-        return sqlSession.selectOne(NAMESPACE + ".selectDeptById", deptId);
+        return sqlSession.selectOne(NAMESPACE + ".selectDeptById", deptId); //확인
     }
 
     @Override
     public void updateDept(DepartDTO dept) {
-        sqlSession.update(NAMESPACE + ".updateDept", dept);
+        sqlSession.update(NAMESPACE + ".updateDept", dept); //확인
     }
 
     @Override
     public void deleteDept(int deptId) {
-        sqlSession.delete(NAMESPACE + ".deleteDept", deptId);
+        sqlSession.delete(NAMESPACE + ".deleteDept", deptId); //확인
     }
 }
