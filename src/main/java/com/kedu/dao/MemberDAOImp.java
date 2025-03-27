@@ -13,7 +13,7 @@ public class MemberDAOImp implements MemberDAO {
     @Autowired
     private SqlSessionTemplate sqlSession;
 
-    private static final String NAMESPACE = "com.kedu.mapper.MemberMapper";
+    private static final String NAMESPACE = "Member";
 
     @Override
     public void insertMember(MemberDTO member) {
