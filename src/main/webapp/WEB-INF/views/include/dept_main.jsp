@@ -37,10 +37,10 @@
         <!-- 부서 관리 -->
         <div class="section active" id="dept-section">
             <h3>부서 등록</h3>
-            <form id="deptForm">
+            <form action="/Depart/insertDept" id="deptForm" method="post" >
                 <div class="form-group">
                     <label>부서 이름</label>
-                    <input type="text" name="deptName" />
+                    <input type="text" name="dept_name" />
                 </div>
                 <button type="submit" class="btn">등록</button>
             </form>
@@ -52,6 +52,12 @@
                 </thead>
                 <tbody id="deptTable">
                     <!-- 부서 데이터 들어옴 -->
+                	<tr>
+                		<td></td>
+                		<td></td>
+                		<td></td>
+                		<td></td>
+                	</tr>
                 </tbody>
             </table>
         </div>
@@ -71,6 +77,20 @@
         // 초기: 부서관리 보여주기
         $('#dept-section').addClass('active');
     });
+    
+    $(document).ready(function() { 
+    $.ajax({
+    	url:"/Depart/selectAllDept"
+    }).done(function(resp){
+    	console.log(resp);
+    
+ 
+    		
+ 
+    })
+    
+    });
+    
 </script>
 </body>
 </html>
