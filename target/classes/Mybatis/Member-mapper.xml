@@ -14,8 +14,8 @@
     </select>
 
     <insert id="insertMember" parameterType="com.kedu.dto.MemberDTO">
-        INSERT INTO member(member_id, name, dept_id, email)
-        VALUES(#{memberId}, #{name}, #{deptId}, #{email})
+        INSERT INTO member(emp_id, emp_pw, emp_name, emp_rrn, emp,phone, emp_email, postcode, address1, address2, emp_deptId, hire_date)
+        VALUES(#{emp_id}, #{emp_pw}, #{emp_name}, #{emp_rrn}, #{emp_phone}, #{emp_email}, #{postcode}, #{address1}, #{address2}, #{emp_deptId}, #{hire_date})
     </insert>
 
     <update id="updateMember" parameterType="com.kedu.dto.MemberDTO">
